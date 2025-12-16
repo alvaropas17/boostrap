@@ -84,7 +84,7 @@
         </div>
     </nav> -->
 
-    <div id="header">
+    <div class="header">
         <svg xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
             <title id="fw-c-header__logo-title">Cisco.com España</title>
             <defs>
@@ -136,7 +136,7 @@
             </li> -->
         </ul>
     </div>
-    <div id="header">
+    <div class="header">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -149,6 +149,8 @@
 
     <div class="jumbotron">
         <div class="card bg-dark text-white">
+            <img src="Copilot_20251213_222223.png" class="card-img" alt="hacker en un centro de datos"
+                id="img-jumbotron" loading="lazy" data-aos="fade-up">
             <div class="card-img-overlay">
                 <p class="lead">Cisco Networking Academy</p>
                 <h1 class="display-4"> Build your skills today. It’s free. </h1>
@@ -164,8 +166,6 @@
                     <a class="btn btn-primary btn-lg" href="#" role="button">Explore Cisco Networking Academy</a>
                 </p>
             </div>
-            <img src="Copilot_20251213_222223.png" class="card-img" alt="hacker en un centro de datos"
-                id="img-jumbotron" loading="lazy" data-aos="fade-up">
         </div>
     </div>
 
@@ -174,12 +174,11 @@
 
     <div class="div2">
         <p id="pequeno">
-            Learn from expert educators around the globe, both in-person and online, for free. Start with
-            individual courses or dive right in to a career path. The learning choices and your tech career future
-            are
-            yours for the taking.
+            Learn from expert educators around the globe, both in-person and online, for free.
         </p>
-    </div>
+        <p id="pequeno">
+            Start with individual courses or dive right in to a career path. The learning choices and your tech career future are yours for the taking.
+        </p>
     </div>
 
 
@@ -351,128 +350,157 @@
         </div>
     </div>
 
-    <!-- Fila de 4 imágenes con collapse en móvil -->
+    <!-- Fila de 4 elementos con collapse en móvil -->
     <div class="container my-5">
         <div class="row text-center">
             <div class="col-12 mb-3">
                 <h3>Galería interactiva</h3>
-                <p>Haz clic en cada imagen para ver más información</p>
+                <p>Haz clic en cada elemento para ver más información</p>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy"
-                    class="img-fluid rounded shadow-sm w-100" alt="Imagen 1" data-toggle="collapse" href="#collapseImg1"
+                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg1"
                     role="button" aria-expanded="false" aria-controls="collapseImg1">
-
+                    Elemento 1
+                </button>
                 <div class="collapse mt-2" id="collapseImg1">
                     <div class="card card-body">
-                        Información de la imagen 1.
+                        Información del elemento 1.
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" class="img-fluid rounded
-                shadow-sm w-100" alt="Imagen 2" data-toggle="collapse" href="#collapseImg2" role="button"
-                    aria-expanded="false" aria-controls="collapseImg2">
-
+                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg2"
+                    role="button" aria-expanded="false" aria-controls="collapseImg2">
+                    Elemento 2
+                </button>
                 <div class="collapse mt-2" id="collapseImg2">
                     <div class="card card-body">
-                        Información de la imagen 2.
+                        Información del elemento 2.
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy"
-                    class="img-fluid rounded shadow-sm w-100" alt="Imagen 3" data-toggle="collapse" href="#collapseImg3"
+                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg3"
                     role="button" aria-expanded="false" aria-controls="collapseImg3">
-
+                    Elemento 3
+                </button>
                 <div class="collapse mt-2" id="collapseImg3">
                     <div class="card card-body">
-                        Información de la imagen 3.
+                        Información del elemento 3.
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy"
-                    class="img-fluid rounded shadow-sm w-100" alt="Imagen 4" data-toggle="collapse" href="#collapseImg4"
+                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg4"
                     role="button" aria-expanded="false" aria-controls="collapseImg4">
+                    Elemento 4
+                </button>
                 <div class="collapse mt-2" id="collapseImg4">
                     <div class="card card-body">
-                        Información de la imagen 4.
+                        Información del elemento 4.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
-                            style="width:24px; height:24px; vertical-align:middle;" loading="lazy"> Facebook
-                    </a>
+    <!-- Accordion de Redes Sociales -->
+    <div class="container">
+        <h3 class="text-center mb-4">Síguenos en Redes Sociales</h3>
+        <div class="accordion" id="accordionSocialMedia">
 
-
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
-                            style="width:24px; height:24px; vertical-align:middle;" loading="lazy"> Instagram
-                    </a>
-                    >
-
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"
-                            style="width:24px; height:24px; vertical-align:middle;" loading="lazy"> Twitter
-                    </a>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
+            <!-- Facebook -->
+            <div class="accordion-item">
+                <!-- <h2  id="headingFacebook"> -->
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    data-bs-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+
+                    <a href="facebook.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                            alt="Facebook" style="width:24px; height:24px; margin-right:10px;" loading="lazy">
+                        Facebook
+                        <!-- </h2> -->
+                        <div id="collapseFacebook" class="accordion-collapse collapse" aria-labelledby="headingFacebook"
+                            data-bs-parent="#accordionSocialMedia">
+                        </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="accordion-item">
+                <h2 id="headingInstagram">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
+                        <a href="instagram.com"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                                style="width:24px; height:24px; margin-right:10px;" loading="lazy">
+                            Instagram</a>
+                    </button>
+                </h2>
+                <div id="collapseInstagram" class="accordion-collapse collapse" aria-labelledby="headingInstagram"
+                    data-bs-parent="#accordionSocialMedia">
+                    <div class="accordion-body">
+                        <p><strong>Descubre contenido visual</strong> sobre cursos, estudiantes y eventos de la
+                            comunidad.</p>
+                        <a href="https://instagram.com/cisconetworkingacademy" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                                style="width:18px; height:18px; margin-right:8px; filter:invert(1);" loading="lazy">
+                            Visitar Instagram
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+
+            <!-- Twitter -->
+            <div class="accordion-item">
+                <h2 id="headingTwitter">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwitter" aria-expanded="false" aria-controls="collapseTwitter">
+
+                        <a href="twitter.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+                                alt="Twitter" style="width:24px; height:24px; margin-right:10px;" loading="lazy">Twitter
+                            / X</a>
+                    </button>
+                </h2>
+                <div id="collapseTwitter" class="accordion-collapse collapse" aria-labelledby="headingTwitter"
+                    data-bs-parent="#accordionSocialMedia">
+                    <div class="accordion-body">
+                        <p><strong>Únete a la conversación</strong> y mantente informado con actualizaciones en tiempo
+                            real.</p>
+                        <a href="https://twitter.com/CiscoNetAcad" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"
+                                style="width:18px; height:18px; margin-right:8px; filter:invert(1);" loading="lazy">
+                            Visitar Twitter
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- LinkedIn -->
+            <div class="accordion-item">
+                <h2 id="headingLinkedIn">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseLinkedIn" aria-expanded="false" aria-controls="collapseLinkedIn">
+                        <a href="https://www.linkedin.com/"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                                style="width:24px; height:24px; margin-right:10px;" loading="lazy">LinkedIn</a>
+                    </button>
+                </h2>
+                <div id="collapseLinkedIn" class="accordion-collapse collapse" aria-labelledby="headingLinkedIn"
+                    data-bs-parent="#accordionSocialMedia">
+                    <div class="accordion-body">
+                        <p><strong>Conecta profesionalmente</strong> con la comunidad de Cisco Networking Academy y
+                            encuentra oportunidades laborales.</p>
+                        <a href="https://linkedin.com/company/cisco-networking-academy" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                                style="width:18px; height:18px; margin-right:8px; filter:invert(1);" loading="lazy">
+                            Visitar LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
