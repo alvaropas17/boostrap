@@ -1,390 +1,239 @@
-/* ============================================
-   MOBILE FIRST - Estilos base para móvil
-   ============================================ */
+/* ===========================================
+   CSS SIMPLIFICADO - MOBILE FIRST
+   =========================================== */
 
-/* ============================================
-   1. ESTILOS GLOBALES
-   ============================================ */
+/* 1. ESTILOS GLOBALES */
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-/* ============================================
-   2. TOPHAT (Barra superior)
-   ============================================ */
+/* 2. TOPHAT - Barra superior */
 #tophat {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    padding: 0 1rem;
-    margin-left: 90px;
-    margin-right: 90px;
-}
-
-#tophat ul {
-    margin-left: auto;
+    padding: 0.5rem 1rem;
 }
 
 #tophat ul li a {
-    font-size: 12px;
+    font-size: 11px;
 }
 
-/* ============================================
-   3. HEADER (Logo y navegación principal)
-   ============================================ */
-.header {
-    display: flex;
-    /* margin: 0 1rem; */
-    border: 1px solid black;
-    max-width: 100%;
-    margin-left: 90px;
-    margin-right: 90px;
-}
-
-.nav {
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-/* ============================================
-   4. JUMBOTRON / HERO SECTION
-   ============================================ */
+/* 3. JUMBOTRON - Hero con imagen overlay */
 .jumbotron {
-    max-width: 100%;
-    margin-left: 90px;
-    margin-right: 90px;
+    padding: 1rem;
 }
 
 #img-jumbotron {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
 }
 
 .card-img-overlay {
-    margin-top: 120px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    padding: 1.5rem;
 }
 
-/* ============================================
-   5. TÍTULOS Y TEXTOS
-   ============================================ */
-.title {
-    padding: 20px 15px;
+.card-img-overlay .display-4 {
+    font-size: 1.5rem;
 }
 
-#grande {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.card-img-overlay .lead,
+.card-img-overlay p {
+    font-size: 0.875rem;
 }
 
-#mediano {
-    font-size: 18px;
-    color: rgb(112, 111, 111);
-}
-
-#pequeno {
-    font-weight: 500;
-}
-
-.descripcion {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: fit-content;
-    text-align: center;
-}
-
-/* ============================================
-   6. GRID DE CURSOS PRINCIPAL
-   ============================================ */
+/* 4. GRID DE CURSOS - Grid responsivo de tarjetas */
 .cursos-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 1rem 90px;
-    max-width: 100%;
+    gap: 2rem;
+    padding: 2rem 1rem;
     justify-items: center;
 }
 
 .grid-item {
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    max-width: 350px;
+    width: 100%;
+    background: white;
+    transition: transform 0.3s;
 }
 
-.grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .grid-item .card-img-top {
-    height: 262px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
 }
 
-/* ============================================
-   7. GRID DE CURSOS ALTERNATIVO
-   ============================================ */
-.cursos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 42px;
-    grid-row-gap: 0px;
-    max-width: 90vw;
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
-.curso1 {
-    grid-area: 1 / 1 / 3 / 2;
-}
-
-.curso2 {
-    grid-area: 1 / 2 / 3 / 3;
-}
-
-.curso3 {
-    grid-area: 1 / 3 / 3 / 4;
-}
-
-/* ============================================
-   8. GRID-CONTAINER (Tarjetas de carrera)
-   ============================================ */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    column-gap: 22px;
-    row-gap: 20px;
-}
-
-/* ============================================
-   9. PARENTS - Contenedores de layout
-   ============================================ */
-.parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    max-width: 90vw;
-    margin-left: 80px;
-    margin-bottom: 30px;
-}
-
-.parent2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 30px 90px;
-    font-size: 30px;
-    padding: 20px;
-}
-
-.parent3 {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.parent3 .div2 {
-    margin-left: 32px;
-}
-
-.parent4 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 8px;
-}
-
-/* ============================================
-   10. DIV HELPERS - Divs de estructura
-   ============================================ */
-.div1 {
-    grid-area: 1 / 1 / 2 / 3;
-}
-
-.div2 {
-    grid-area: 1 / 3 / 2 / 5;
-    display: inline-block;
-    margin-left: 90px;
-    margin-right: 90px;
-    width: calc(100% - 180px);
-}
-
-.div2 p {
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
-    padding: 0 10px;
-}
-
-.div1-2 {
-    grid-area: 1 / 1 / 2 / 5;
-    border: 1px solid rgb(175, 95, 95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
-
-/* ============================================
-   11. CONTAINERS (Bootstrap override)
-   ============================================ */
-.container {
-    display: inline;
-}
-
-.card.h-100.shadow-sm img {
-    height: 200px;
-    width: 80%;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-}
-
-.container-fluid.py-5 {
-    padding-left: 90px !important;
-    padding-right: 90px !important;
-}
-
-/* Centrar imagen de job market */
-.container-fluid .img-fluid {
-    margin: 0 auto;
-    display: block;
-}
-
-/* ============================================
-   12. REDES SOCIALES
-   ============================================ */
+/* 5. ACCORDION - Redes sociales */
 #accordionSocialMedia {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin: 0 90px;
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .accordion-item {
     border: 1px solid #dee2e6;
     border-radius: 8px;
-    flex: 0 1 auto;
-    min-width: 200px;
-    max-width: 250px;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.3s;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-button {
-    font-size: 16px;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem;
+    background: white;
+    color: #333;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0056b3;
 }
 
 .accordion-button img {
-    width: 24px !important;
-    height: 24px !important;
-    margin-right: 10px !important;
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
 }
 
-.accordion-button a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+/* 6. IMÁGENES CLICKEABLES - Con efecto hover */
+.clickable-image-container {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
-/* ============================================
-   MEDIA QUERIES - RESPONSIVE DESIGN
-   ============================================ */
+.clickable-image-container:hover {
+    transform: scale(1.05);
+}
 
-/* ============================================
-   TABLET: desde 600px en adelante
-   ============================================ */
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.clickable-image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.clickable-image-container:hover .clickable-image {
+    opacity: 0.85;
+}
+
+/* 7. EFECTOS EN CARDS */
+.card.h-100 {
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.card.h-100:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   MEDIA QUERIES - RESPONSIVE
+   ========================================== */
+
+/* TABLET: 600px+ */
 @media (min-width: 600px) {
-
-    /* Grid de cursos */
     .cursos-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
     }
 
-    /* Tophat */
-    #tophat ul li a {
-        font-size: 13px;
+    #tophat {
+        padding: 0.5rem 2rem;
     }
 
-    /* Textos */
-    #mediano {
-        font-size: 20px;
+    .jumbotron {
+        padding: 1rem 2rem;
     }
 
-    /* Jumbotron */
     #img-jumbotron {
-        height: 400px;
+        height: 350px;
+    }
+
+    .card-img-overlay .display-4 {
+        font-size: 2rem;
+    }
+
+    .card-img-overlay .lead,
+    .card-img-overlay p {
+        font-size: 1rem;
+    }
+
+    #accordionSocialMedia {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
-/* ============================================
-   DESKTOP: desde 900px en adelante
-   ============================================ */
+/* DESKTOP: 900px+ */
 @media (min-width: 900px) {
-
-    /* Grid de cursos */
     .cursos-grid {
         grid-template-columns: repeat(3, 1fr);
-        margin: 2rem 90px;
-        gap: 2rem;
+        padding: 3rem 90px;
+        gap: 2.5rem;
     }
 
-    /* Header */
-    .header {
-        margin-left: 90px;
-        margin-right: 90px;
-    }
-
-    /* Tophat */
     #tophat {
-        width: 90%;
-        padding: 0 20px 0 0;
+        padding: 0.5rem 90px;
     }
 
-    #tophat ul li a {
-        font-size: 14px;
-    }
-
-    /* Navegación */
-    .nav {
-        margin-left: 30px;
-    }
-
-    /* Títulos */
-    .title {
-        padding: 30px 50px;
-    }
-
-    /* Jumbotron */
     .jumbotron {
-        margin-left: 90px;
-        margin-right: 90px;
+        padding: 2rem 90px;
     }
 
     #img-jumbotron {
-        max-width: 1200px;
         height: 500px;
+    }
+
+    .card-img-overlay {
+        padding: 3rem;
+    }
+
+    .card-img-overlay .display-4 {
+        font-size: 3rem;
+    }
+
+    .card-img-overlay .lead {
+        font-size: 1.25rem;
+    }
+
+    .card-img-overlay p {
+        font-size: 1.125rem;
+    }
+
+    #accordionSocialMedia {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
     }
 }

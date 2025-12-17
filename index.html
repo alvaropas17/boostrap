@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <!-- Topbar superior -->
     <div id="tophat">
         <ul class="nav">
             <li class="nav-item">
@@ -42,109 +43,86 @@
         </ul>
     </div>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+    <!-- Navbar principal de 3 columnas: Menú | Logo | Herramientas -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid px-4">
+            <!-- Columna 1: Menú hamburguesa y navegación -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Columna 2: Logo (centrado en móvil) -->
+            <a class="navbar-brand mx-auto mx-lg-0" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
+                    <title id="fw-c-header__logo-title">Cisco.com España</title>
+                    <defs>
+                        <path
+                            d="M0 22.769a2.348 2.348 0 0 0 3.935 1.545c.434-.403.7-.955.744-1.545v-5.2a2.34 2.34 0 0 0-4.679 0v5.2"
+                            id="bar_short" class="bar"></path>
+                        <path
+                            d="M12.95 22.769a2.349 2.349 0 0 0 2.34 2.171 2.346 2.346 0 0 0 2.339-2.171V11.112a2.341 2.341 0 0 0-4.679 0V22.77"
+                            id="bar_tall" class="bar"></path>
+                        <path d="M25.832 27.464a2.345 2.345 0 0 0 4.678 0V2.249a2.342 2.342 0 0 0-4.678 0v25.215"
+                            id="bar_grande" class="bar"></path>
+                        <path
+                            d="M24.026 56.277v-5.002l-.098.043a9.253 9.253 0 0 1-3.605.915 5.303 5.303 0 0 1-3.63-1.07 4.644 4.644 0 0 1-1.58-2.244 5.395 5.395 0 0 1-.106-3 4.6 4.6 0 0 1 1.609-2.566 4.823 4.823 0 0 1 2.528-1.09 8.332 8.332 0 0 1 4.774.895l.108.056v-5.03l-.228-.061a12.78 12.78 0 0 0-4.552-.596 10.534 10.534 0 0 0-4.065.93 9.29 9.29 0 0 0-3.329 2.572 10.014 10.014 0 0 0-.182 12.18 9.546 9.546 0 0 0 5.292 3.403c2.211.538 4.528.456 6.697-.234l.367-.101"
+                            id="cisco_c"></path>
+                    </defs>
+                    <g fill="#02C8FF" fill-rule="evenodd">
+                        <use href="#cisco_c"></use>
+                        <use href="#cisco_c" x="49.5"></use>
+                        <path
+                            d="M41.69 52.125l-.019 4.308.315.054c.989.185 1.987.313 2.99.385a18.1 18.1 0 0 0 2.642.051c.842-.06 1.675-.218 2.48-.468a6.862 6.862 0 0 0 2.573-1.371 5.19 5.19 0 0 0 1.498-2.148 5.912 5.912 0 0 0-.03-4.324 4.852 4.852 0 0 0-1.343-1.862 5.568 5.568 0 0 0-1.97-1.147l-3.25-1.206a1.742 1.742 0 0 1-.887-.845 1.107 1.107 0 0 1 .036-.986 1.29 1.29 0 0 1 .217-.291 1.75 1.75 0 0 1 .48-.347c.363-.18.755-.293 1.158-.337a6.76 6.76 0 0 1 2.072.022c.81.088 1.613.231 2.402.43l.168.037v-3.974l-.31-.067a21.14 21.14 0 0 0-2.444-.435 12.545 12.545 0 0 0-3.213-.014 6.945 6.945 0 0 0-3.699 1.488 4.908 4.908 0 0 0-1.58 2.178 5.984 5.984 0 0 0-.003 4.05c.242.65.63 1.237 1.136 1.714.437.422.932.78 1.47 1.065.708.38 1.458.675 2.235.878.257.077.512.158.766.243l.385.141.11.045c.38.136.726.35 1.018.628.202.19.358.423.455.683.06.237.061.485.003.723a1.536 1.536 0 0 1-.744.892 3.691 3.691 0 0 1-1.239.387 9 9 0 0 1-1.92.097 21.973 21.973 0 0 1-2.507-.334c-.433-.09-.864-.19-1.291-.303l-.16-.04zM30.546 56.607h4.73V37.846h-4.73zM85.305 43.386a4.934 4.934 0 1 1 6.157 7.711 4.934 4.934 0 0 1-6.157-7.71m-6.867 3.848A9.87 9.87 0 0 0 90.44 56.72a9.629 9.629 0 0 0 3.157-17.729 9.934 9.934 0 0 0-15.16 8.244">
+                        </path>
+                        <use href="#bar_short" x="0"></use>
+                        <use href="#bar_tall" x="0"></use>
+                        <use href="#bar_grande" x="0"></use>
+                        <use href="#bar_tall" x="25.875"></use>
+                        <use href="#bar_short" x="51.75"></use>
+                        <use href="#bar_tall" x="51.75"></use>
+                        <use href="#bar_grande" x="51.75"></use>
+                        <use href="#bar_tall" x="77.625"></use>
+                        <use href="#bar_short" x="103.375"></use>
+                    </g>
+                </svg>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" href="#">Productos y servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#">Soluciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Formación</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                <!-- Columna 3: Herramientas (búsqueda y login) -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
-    <div class="header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
-            <title id="fw-c-header__logo-title">Cisco.com España</title>
-            <defs>
-                <path
-                    d="M0 22.769a2.348 2.348 0 0 0 3.935 1.545c.434-.403.7-.955.744-1.545v-5.2a2.34 2.34 0 0 0-4.679 0v5.2"
-                    id="bar_short" class="bar"></path>
-                <path
-                    d="M12.95 22.769a2.349 2.349 0 0 0 2.34 2.171 2.346 2.346 0 0 0 2.339-2.171V11.112a2.341 2.341 0 0 0-4.679 0V22.77"
-                    id="bar_tall" class="bar"></path>
-                <path d="M25.832 27.464a2.345 2.345 0 0 0 4.678 0V2.249a2.342 2.342 0 0 0-4.678 0v25.215"
-                    id="bar_grande" class="bar"></path>
-                <path
-                    d="M24.026 56.277v-5.002l-.098.043a9.253 9.253 0 0 1-3.605.915 5.303 5.303 0 0 1-3.63-1.07 4.644 4.644 0 0 1-1.58-2.244 5.395 5.395 0 0 1-.106-3 4.6 4.6 0 0 1 1.609-2.566 4.823 4.823 0 0 1 2.528-1.09 8.332 8.332 0 0 1 4.774.895l.108.056v-5.03l-.228-.061a12.78 12.78 0 0 0-4.552-.596 10.534 10.534 0 0 0-4.065.93 9.29 9.29 0 0 0-3.329 2.572 10.014 10.014 0 0 0-.182 12.18 9.546 9.546 0 0 0 5.292 3.403c2.211.538 4.528.456 6.697-.234l.367-.101"
-                    id="cisco_c"></path>
-            </defs>
-            <g fill="#02C8FF" fill-rule="evenodd">
-                <use href="#cisco_c"></use>
-                <use href="#cisco_c" x="49.5"></use>
-                <path
-                    d="M41.69 52.125l-.019 4.308.315.054c.989.185 1.987.313 2.99.385a18.1 18.1 0 0 0 2.642.051c.842-.06 1.675-.218 2.48-.468a6.862 6.862 0 0 0 2.573-1.371 5.19 5.19 0 0 0 1.498-2.148 5.912 5.912 0 0 0-.03-4.324 4.852 4.852 0 0 0-1.343-1.862 5.568 5.568 0 0 0-1.97-1.147l-3.25-1.206a1.742 1.742 0 0 1-.887-.845 1.107 1.107 0 0 1 .036-.986 1.29 1.29 0 0 1 .217-.291 1.75 1.75 0 0 1 .48-.347c.363-.18.755-.293 1.158-.337a6.76 6.76 0 0 1 2.072.022c.81.088 1.613.231 2.402.43l.168.037v-3.974l-.31-.067a21.14 21.14 0 0 0-2.444-.435 12.545 12.545 0 0 0-3.213-.014 6.945 6.945 0 0 0-3.699 1.488 4.908 4.908 0 0 0-1.58 2.178 5.984 5.984 0 0 0-.003 4.05c.242.65.63 1.237 1.136 1.714.437.422.932.78 1.47 1.065.708.38 1.458.675 2.235.878.257.077.512.158.766.243l.385.141.11.045c.38.136.726.35 1.018.628.202.19.358.423.455.683.06.237.061.485.003.723a1.536 1.536 0 0 1-.744.892 3.691 3.691 0 0 1-1.239.387 9 9 0 0 1-1.92.097 21.973 21.973 0 0 1-2.507-.334c-.433-.09-.864-.19-1.291-.303l-.16-.04zM30.546 56.607h4.73V37.846h-4.73zM85.305 43.386a4.934 4.934 0 1 1 6.157 7.711 4.934 4.934 0 0 1-6.157-7.71m-6.867 3.848A9.87 9.87 0 0 0 90.44 56.72a9.629 9.629 0 0 0 3.157-17.729 9.934 9.934 0 0 0-15.16 8.244">
-                </path>
-                <use href="#bar_short" x="0"></use>
-                <use href="#bar_tall" x="0"></use>
-                <use href="#bar_grande" x="0"></use>
-                <use href="#bar_tall" x="25.875"></use>
-                <use href="#bar_short" x="51.75"></use>
-                <use href="#bar_tall" x="51.75"></use>
-                <use href="#bar_grande" x="51.75"></use>
-                <use href="#bar_tall" x="77.625"></use>
-                <use href="#bar_short" x="103.375"></use>
-            </g>
-        </svg>
-
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Productos y servicios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Soluciones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Soporte</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Formación</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link disabled" href="#">Formación</a>
-            </li> -->
-        </ul>
-    </div>
-    <div class="header">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container-fluid px-4">
+            <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Library</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
 
     <div class="jumbotron">
@@ -282,6 +260,93 @@
         </div> -->
     </div>
 
+    <!-- Sección de filas tipo damero (Card e Imagen alternando) -->
+    <div class="container my-5">
+        <!-- Fila 1: Card izquierda | Imagen derecha -->
+        <div class="row align-items-center mb-5 damero-row">
+            <div class="col-12 col-md-6" data-aos="fade-right">
+                <div class="card h-100 shadow">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Networking Fundamentals</h3>
+                        <p class="card-text">Master the basics of computer networks. Learn how data travels across the internet, understand IP addressing, and get hands-on experience with network configuration.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ TCP/IP protocols</li>
+                            <li>✓ Network topologies</li>
+                            <li>✓ Practical labs</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" data-aos="fade-left">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Networking" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Fila 2: Imagen izquierda | Card derecha -->
+        <div class="row align-items-center mb-5 damero-row">
+            <div class="col-12 col-md-6 order-md-1 order-2" data-aos="fade-right">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Cybersecurity" loading="lazy">
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-1" data-aos="fade-left">
+                <div class="card h-100 shadow">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Cybersecurity Essentials</h3>
+                        <p class="card-text">Protect digital assets and understand modern security threats. Learn encryption, network security, and best practices to keep data safe from cyber attacks.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Threat detection</li>
+                            <li>✓ Security protocols</li>
+                            <li>✓ Ethical hacking basics</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 3: Card izquierda | Imagen derecha -->
+        <div class="row align-items-center mb-5 damero-row">
+            <div class="col-12 col-md-6" data-aos="fade-right">
+                <div class="card h-100 shadow">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Programming for Everyone</h3>
+                        <p class="card-text">Start your coding journey with Python and JavaScript. Build web applications, automate tasks, and develop problem-solving skills essential for any tech career.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Python fundamentals</li>
+                            <li>✓ Web development</li>
+                            <li>✓ Real-world projects</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" data-aos="fade-left">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Programming" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Fila 4: Imagen izquierda | Card derecha -->
+        <div class="row align-items-center mb-5 damero-row">
+            <div class="col-12 col-md-6 order-md-1 order-2" data-aos="fade-right">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="IoT" loading="lazy">
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-1" data-aos="fade-left">
+                <div class="card h-100 shadow">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Internet of Things (IoT)</h3>
+                        <p class="card-text">Explore the connected world of smart devices. Learn how IoT transforms industries, from smart homes to industrial automation and healthcare.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Sensor networks</li>
+                            <li>✓ Data analytics</li>
+                            <li>✓ IoT security</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container my-5">
         <div class="text-center mb-5">
             <h2 class="display-4">Follow a career path to your next success</h2>
@@ -350,54 +415,58 @@
         </div>
     </div>
 
-    <!-- Fila de 4 elementos con collapse en móvil -->
+    <!-- Fila de 4 imágenes con collapse en móvil -->
     <div class="container my-5">
         <div class="row text-center">
-            <div class="col-12 mb-3">
-                <h3>Galería interactiva</h3>
-                <p>Haz clic en cada elemento para ver más información</p>
+            <div class="col-12 mb-4">
+                <h3>Explore Our Community</h3>
+                <p>Click on each image to discover more</p>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg1"
-                    role="button" aria-expanded="false" aria-controls="collapseImg1">
-                    Elemento 1
-                </button>
-                <div class="collapse mt-2" id="collapseImg1">
+                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg1" role="button" aria-expanded="false" aria-controls="collapseImg1">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Students" loading="lazy">
+                    <div class="image-overlay">Click to learn more</div>
+                </div>
+                <div class="collapse mt-3" id="collapseImg1">
                     <div class="card card-body">
-                        Información del elemento 1.
+                        <h5>Global Students</h5>
+                        <p>Join millions of students worldwide learning technology skills that matter.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg2"
-                    role="button" aria-expanded="false" aria-controls="collapseImg2">
-                    Elemento 2
-                </button>
-                <div class="collapse mt-2" id="collapseImg2">
+                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg2" role="button" aria-expanded="false" aria-controls="collapseImg2">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Instructors" loading="lazy">
+                    <div class="image-overlay">Click to learn more</div>
+                </div>
+                <div class="collapse mt-3" id="collapseImg2">
                     <div class="card card-body">
-                        Información del elemento 2.
+                        <h5>Expert Instructors</h5>
+                        <p>Learn from certified professionals with real-world industry experience.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg3"
-                    role="button" aria-expanded="false" aria-controls="collapseImg3">
-                    Elemento 3
-                </button>
-                <div class="collapse mt-2" id="collapseImg3">
+                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg3" role="button" aria-expanded="false" aria-controls="collapseImg3">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Certificates" loading="lazy">
+                    <div class="image-overlay">Click to learn more</div>
+                </div>
+                <div class="collapse mt-3" id="collapseImg3">
                     <div class="card card-body">
-                        Información del elemento 3.
+                        <h5>Industry Certifications</h5>
+                        <p>Earn recognized credentials that boost your career prospects.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <button class="btn btn-outline-primary w-100" data-toggle="collapse" href="#collapseImg4"
-                    role="button" aria-expanded="false" aria-controls="collapseImg4">
-                    Elemento 4
-                </button>
-                <div class="collapse mt-2" id="collapseImg4">
+                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg4" role="button" aria-expanded="false" aria-controls="collapseImg4">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Community" loading="lazy">
+                    <div class="image-overlay">Click to learn more</div>
+                </div>
+                <div class="collapse mt-3" id="collapseImg4">
                     <div class="card card-body">
-                        Información del elemento 4.
+                        <h5>Strong Community</h5>
+                        <p>Connect with peers, mentors, and professionals in your field.</p>
                     </div>
                 </div>
             </div>
@@ -405,41 +474,48 @@
     </div>
 
     <!-- Accordion de Redes Sociales -->
-    <div class="container">
+    <div class="container my-5">
         <h3 class="text-center mb-4">Síguenos en Redes Sociales</h3>
         <div class="accordion" id="accordionSocialMedia">
 
             <!-- Facebook -->
             <div class="accordion-item">
-                <!-- <h2  id="headingFacebook"> -->
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
-
-                    <a href="facebook.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
-                            alt="Facebook" style="width:24px; height:24px; margin-right:10px;" loading="lazy">
+                <h2 class="accordion-header" id="headingFacebook">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                            alt="Facebook" style="width:28px; height:28px; margin-right:10px;" loading="lazy">
                         Facebook
-                        <!-- </h2> -->
-                        <div id="collapseFacebook" class="accordion-collapse collapse" aria-labelledby="headingFacebook"
-                            data-bs-parent="#accordionSocialMedia">
-                        </div>
+                    </button>
+                </h2>
+                <div id="collapseFacebook" class="accordion-collapse collapse" aria-labelledby="headingFacebook"
+                    data-parent="#accordionSocialMedia">
+                    <div class="accordion-body">
+                        <p><strong>Stay connected</strong> with our Facebook community for updates, events, and networking opportunities.</p>
+                        <a href="https://facebook.com/cisconetworkingacademy" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                                style="width:18px; height:18px; margin-right:8px; filter:invert(1);" loading="lazy">
+                            Visit Facebook
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Instagram -->
             <div class="accordion-item">
-                <h2 id="headingInstagram">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
-                        <a href="instagram.com"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
-                                style="width:24px; height:24px; margin-right:10px;" loading="lazy">
-                            Instagram</a>
+                <h2 class="accordion-header" id="headingInstagram">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                            style="width:28px; height:28px; margin-right:10px;" loading="lazy">
+                        Instagram
                     </button>
                 </h2>
                 <div id="collapseInstagram" class="accordion-collapse collapse" aria-labelledby="headingInstagram"
-                    data-bs-parent="#accordionSocialMedia">
+                    data-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Descubre contenido visual</strong> sobre cursos, estudiantes y eventos de la
-                            comunidad.</p>
+                        <p><strong>Descubre contenido visual</strong> sobre cursos, estudiantes y eventos de la comunidad.</p>
                         <a href="https://instagram.com/cisconetworkingacademy" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
@@ -452,20 +528,18 @@
 
             <!-- Twitter -->
             <div class="accordion-item">
-                <h2 id="headingTwitter">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwitter" aria-expanded="false" aria-controls="collapseTwitter">
-
-                        <a href="twitter.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
-                                alt="Twitter" style="width:24px; height:24px; margin-right:10px;" loading="lazy">Twitter
-                            / X</a>
+                <h2 class="accordion-header" id="headingTwitter">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwitter" aria-expanded="false" aria-controls="collapseTwitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+                            alt="Twitter" style="width:28px; height:28px; margin-right:10px;" loading="lazy">
+                        Twitter / X
                     </button>
                 </h2>
                 <div id="collapseTwitter" class="accordion-collapse collapse" aria-labelledby="headingTwitter"
-                    data-bs-parent="#accordionSocialMedia">
+                    data-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Únete a la conversación</strong> y mantente informado con actualizaciones en tiempo
-                            real.</p>
+                        <p><strong>Únete a la conversación</strong> y mantente informado con actualizaciones en tiempo real.</p>
                         <a href="https://twitter.com/CiscoNetAcad" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"
@@ -478,19 +552,18 @@
 
             <!-- LinkedIn -->
             <div class="accordion-item">
-                <h2 id="headingLinkedIn">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseLinkedIn" aria-expanded="false" aria-controls="collapseLinkedIn">
-                        <a href="https://www.linkedin.com/"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
-                                style="width:24px; height:24px; margin-right:10px;" loading="lazy">LinkedIn</a>
+                <h2 class="accordion-header" id="headingLinkedIn">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseLinkedIn" aria-expanded="false" aria-controls="collapseLinkedIn">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                            style="width:28px; height:28px; margin-right:10px;" loading="lazy">
+                        LinkedIn
                     </button>
                 </h2>
                 <div id="collapseLinkedIn" class="accordion-collapse collapse" aria-labelledby="headingLinkedIn"
-                    data-bs-parent="#accordionSocialMedia">
+                    data-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Conecta profesionalmente</strong> con la comunidad de Cisco Networking Academy y
-                            encuentra oportunidades laborales.</p>
+                        <p><strong>Conecta profesionalmente</strong> con la comunidad de Cisco Networking Academy y encuentra oportunidades laborales.</p>
                         <a href="https://linkedin.com/company/cisco-networking-academy" target="_blank"
                             rel="noopener noreferrer" class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
