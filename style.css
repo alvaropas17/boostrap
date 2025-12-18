@@ -1,6 +1,17 @@
 /* ===========================================
-   CSS SIMPLIFICADO - MOBILE FIRST
+   CSS MODERNO - PURPLE & WHITE THEME
    =========================================== */
+
+:root {
+    --primary-purple: #6a0dad;
+    --secondary-purple: #8e24aa;
+    --dark-purple: #4a148c;
+    --light-purple: #f3e5f5;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #f8f9fa;
+    --transition-speed: 0.3s;
+}
 
 /* 1. ESTILOS GLOBALES */
 * {
@@ -11,6 +22,69 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: #fdfdfd;
+}
+
+a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--dark-purple);
+}
+
+/* Sobrescribir botones de Bootstrap */
+.btn-primary {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    transition: all var(--transition-speed);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-purple);
+    border-color: var(--dark-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.text-primary {
+    color: var(--primary-purple) !important;
+}
+
+.text-purple {
+    color: var(--primary-purple) !important;
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+    transition: all var(--transition-speed) ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Footer hover text */
+.hover-text-white:hover {
+    color: white !important;
 }
 
 /* 2. TOPHAT - Barra superior */
@@ -18,35 +92,61 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem 1rem;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
 }
 
 #tophat ul li a {
-    font-size: 11px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+#tophat ul li a:hover {
+    color: var(--primary-purple);
+}
+
+/* Navbar spacing */
+.navbar-nav .nav-item {
+    margin: 0 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
 }
 
 /* 3. JUMBOTRON - Hero con imagen overlay */
 .jumbotron {
     padding: 1rem;
+    margin-bottom: 0;
 }
 
 #img-jumbotron {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .card-img-overlay {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(to right, rgba(74, 20, 140, 0.85), rgba(106, 13, 173, 0.4));
     padding: 1.5rem;
+    border-radius: 12px;
+    color: var(--white);
 }
 
 .card-img-overlay .display-4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .card-img-overlay .lead,
 .card-img-overlay p {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
+    font-weight: 400;
 }
 
 /* 4. GRID DE CURSOS - Grid responsivo de tarjetas */
@@ -59,17 +159,19 @@ body {
 }
 
 .grid-item {
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     width: 100%;
     background: white;
-    transition: transform 0.3s;
+    transition: all var(--transition-speed);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(106, 13, 173, 0.15);
+    border-color: var(--light-purple);
 }
 
 .grid-item .card-img-top {
@@ -78,52 +180,69 @@ body {
     object-fit: cover;
 }
 
-/* 5. ACCORDION - Redes sociales */
-#accordionSocialMedia {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+.grid-item .card-body {
+    padding: 1.5rem;
 }
 
+.grid-item .card-title {
+    color: var(--dark-purple);
+    font-weight: 600;
+}
+
+/* 5. ACCORDION - Redes sociales */
 .accordion-item {
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    transition: box-shadow 0.3s;
+    border: 1px solid #eee;
+    border-radius: 12px !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: box-shadow var(--transition-speed);
 }
 
 .accordion-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .accordion-button {
-    padding: 1rem;
+    padding: 1.2rem;
     background: white;
-    color: #333;
+    color: var(--text-dark);
+    font-weight: 600;
+    border-radius: 12px !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #f8f9fa;
-    color: #0056b3;
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
+    box-shadow: none;
 }
 
-.accordion-button img {
-    width: 28px;
-    height: 28px;
-    margin-right: 12px;
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
+    border-color: var(--primary-purple);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236a0dad'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a148c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 /* 6. IMÁGENES CLICKEABLES - Con efecto hover */
 .clickable-image-container {
     position: relative;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform var(--transition-speed);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .clickable-image-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.2);
 }
 
 .image-overlay {
@@ -131,31 +250,48 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    background: linear-gradient(to top, rgba(74, 20, 140, 0.9), transparent);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     font-weight: 600;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity var(--transition-speed);
 }
 
 .clickable-image-container:hover .image-overlay {
     opacity: 1;
 }
 
-.clickable-image-container:hover .clickable-image {
-    opacity: 0.85;
+/* 7. EFECTOS EN CARDS GENERALES */
+.card {
+    border: none;
+    border-radius: 16px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-/* 7. EFECTOS EN CARDS */
-.card.h-100 {
-    border-radius: 12px;
-    transition: transform 0.3s;
+.card.shadow, .card.shadow-sm {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
 }
 
-.card.h-100:hover {
+.card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+}
+
+.card-title {
+    color: var(--dark-purple);
+    font-weight: 700;
+}
+
+/* 8. SECCIONES DE FONDO */
+.bg-purple-light {
+    background-color: var(--light-purple) !important;
+}
+
+.bg-purple-dark {
+    background-color: var(--dark-purple) !important;
+    color: white;
 }
 
 /* ==========================================
@@ -178,21 +314,16 @@ body {
     }
 
     #img-jumbotron {
-        height: 350px;
+        height: 400px;
     }
 
     .card-img-overlay .display-4 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .card-img-overlay .lead,
     .card-img-overlay p {
-        font-size: 1rem;
-    }
-
-    #accordionSocialMedia {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -213,27 +344,143 @@ body {
     }
 
     #img-jumbotron {
-        height: 500px;
+        height: 550px;
     }
 
     .card-img-overlay {
-        padding: 3rem;
+        padding: 4rem;
+        background: linear-gradient(to right, rgba(74, 20, 140, 0.9), rgba(106, 13, 173, 0.3));
     }
 
     .card-img-overlay .display-4 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .card-img-overlay .lead {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
     }
+}
 
-    .card-img-overlay p {
-        font-size: 1.125rem;
-    }
+/* ===========================================
+   MEJORAS VISUALES MODERNAS
+   =========================================== */
 
-    #accordionSocialMedia {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-    }
+/* Badges personalizados */
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+}
+
+.bg-purple-light {
+    background-color: var(--light-purple) !important;
+}
+
+.bg-purple-dark {
+    background-color: var(--dark-purple) !important;
+}
+
+/* Gradiente para headers */
+.gradient-purple {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%);
+}
+
+/* Efecto de sombra para cards elevadas */
+.shadow-lg-hover {
+    transition: box-shadow var(--transition-speed);
+}
+
+.shadow-lg-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Position relative para badges en esquina */
+.position-relative {
+    position: relative;
+}
+
+/* Sticky navbar effect */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+/* Border radius improvements */
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+/* Icon spacing */
+.bi {
+    vertical-align: middle;
+}
+
+/* Footer styles */
+footer a {
+    transition: all var(--transition-speed);
+}
+
+footer .social-icons a {
+    display: inline-block;
+    transition: transform var(--transition-speed);
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Card body padding improvements */
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Image corner badges */
+.position-absolute {
+    position: absolute;
+}
+
+/* Opacity utilities */
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Additional button improvements */
+.btn {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+}
+
+/* Mejoras para las tarjetas de redes sociales */
+.card.h-100 {
+    height: 100%;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Background color utilities for icons */
+.bg-opacity-10 {
+    --bs-bg-opacity: 0.1;
+}
+
+.bg-opacity-25 {
+    --bs-bg-opacity: 0.25;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
 }

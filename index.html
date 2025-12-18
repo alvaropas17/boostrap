@@ -6,19 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Práctica Cisco</title>
     <!-- AOS Animate On Scroll CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -26,34 +20,34 @@
 
 <body>
     <!-- Topbar superior -->
-    <div id="tophat">
+    <div id="tophat" class="bg-white shadow-sm">
         <ul class="nav">
             <li class="nav-item">
-                <a href="" class="nav-link disabled">¿Cómo comprar?</a>
+                <a href="" class="nav-link"><i class="bi bi-cart"></i> ¿Cómo comprar?</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link disabled">Partners</a>
+                <a href="" class="nav-link"><i class="bi bi-people"></i> Partners</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link disabled">Log in</a>
+                <a href="" class="nav-link"><i class="bi bi-person-circle"></i> Log in</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link disabled">EN US</a>
+                <a href="" class="nav-link"><i class="bi bi-globe"></i> EN US</a>
             </li>
         </ul>
     </div>
 
     <!-- Navbar principal de 3 columnas: Menú | Logo | Herramientas -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container-fluid px-4">
             <!-- Columna 1: Menú hamburguesa y navegación -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                 aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Columna 2: Logo (centrado en móvil) -->
-            <a class="navbar-brand mx-auto mx-lg-0" href="#">
+            <a class="navbar-brand mx-auto ms-lg-5 me-lg-5" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
                     <title id="fw-c-header__logo-title">Cisco.com España</title>
                     <defs>
@@ -89,7 +83,7 @@
             </a>
 
             <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Productos y servicios</a>
                     </li>
@@ -105,7 +99,7 @@
                 </ul>
 
                 <!-- Columna 3: Herramientas (búsqueda y login) -->
-                <form class="d-flex" role="search">
+                <form class="d-flex ms-lg-3" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                     <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
@@ -114,12 +108,12 @@
     </nav>
 
     <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="bg-light py-2">
+    <nav aria-label="breadcrumb" class="bg-light py-3 border-bottom">
         <div class="container-fluid px-4">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Academy</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cursos</li>
             </ol>
         </div>
     </nav>
@@ -130,19 +124,18 @@
             <img src="Copilot_20251213_222223.png" class="card-img" alt="hacker en un centro de datos"
                 id="img-jumbotron" loading="lazy" data-aos="fade-up">
             <div class="card-img-overlay">
-                <p class="lead">Cisco Networking Academy</p>
-                <h1 class="display-4"> Build your skills today. It’s free. </h1>
-                <hr class="my-4">
-                <p>Explore our free, self-paced online courses. Learn to build networks, develop apps, and secure
+                <span class="badge bg-light text-purple mb-3 px-3 py-2"><i class="bi bi-star-fill"></i> Cisco Networking Academy</span>
+                <h1 class="display-4 fw-bold mb-4">Build your skills today.<br><span class="text-warning">It's free.</span></h1>
+                <hr class="my-4 border-light">
+                <p class="fs-5 mb-4">Explore our free, self-paced online courses. Learn to build networks, develop apps, and secure
                     devices.
-                    Join
-                    Cisco Networking Academy and become a global problem solver, think entrepreneurially, and drive
-                    social
-                    change.
+                    Join Cisco Networking Academy and become a global problem solver, think entrepreneurially, and drive
+                    social change.
                 </p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Explore Cisco Networking Academy</a>
-                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a class="btn btn-primary btn-lg px-4 py-3" href="#" role="button"><i class="bi bi-rocket-takeoff"></i> Empezar Ahora</a>
+                    <a class="btn btn-outline-light btn-lg px-4 py-3" href="#" role="button"><i class="bi bi-play-circle"></i> Ver Demo</a>
+                </div>
             </div>
         </div>
     </div>
@@ -150,62 +143,90 @@
 
 
 
-    <div class="div2">
-        <p id="pequeno">
-            Learn from expert educators around the globe, both in-person and online, for free.
-        </p>
-        <p id="pequeno">
-            Start with individual courses or dive right in to a career path. The learning choices and your tech career future are yours for the taking.
-        </p>
+    <div class="container my-5 py-4">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+                <span class="badge bg-purple-light text-purple mb-3 px-4 py-2 fs-6"><i class="bi bi-mortarboard"></i> Educación de Calidad Mundial</span>
+                <h2 class="display-5 fw-bold text-purple mb-4">Aprende con expertos de todo el mundo</h2>
+                <p class="lead text-muted mb-4">
+                    Learn from expert educators around the globe, both in-person and online, for free.
+                </p>
+                <p class="text-muted fs-5">
+                    Start with individual courses or dive right in to a career path. The learning choices and your tech career
+                    future are yours for the taking.
+                </p>
+            </div>
+        </div>
     </div>
 
-
-    <div class="parent2">
-        <!-- <div class="div1-2"> -->
-        Choose what you want to learn to shape who you want to be
-        <!-- </div> -->
+    <div class="bg-gradient-purple py-5 text-black text-center">
+        <div class="container">
+            <h3 class="display-6 fw-bold mb-3">Choose what you want to learn to shape who you want to be</h3>
+            <p class="lead">Miles de cursos disponibles en tecnología de vanguardia</p>
+        </div>
     </div>
 
     <div class="cursos-grid">
         <div class="grid-item">
-            <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" data-aos="zoom-in"
-                class="card-img-top" alt="...">
+            <div class="position-relative overflow-hidden">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" data-aos="zoom-in"
+                    class="card-img-top" alt="...">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-success px-3 py-2"><i class="bi bi-star"></i> Beginner</span>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">Beginner</h5>
-                <h5 class="card-title">Introducción a la ciberseguridad</h5>
-                <p class="card-text">Explore the exciting field of cybersecurity and why cybersecurity is a
-                    future-proof career. <br> Duration: 06h
+                <h5 class="card-title fw-bold mb-3"><i class="bi bi-shield-lock text-purple"></i> Introducción a la ciberseguridad</h5>
+                <p class="card-text text-muted">Explore the exciting field of cybersecurity and why cybersecurity is a
+                    future-proof career.
                 </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="badge bg-purple-light text-purple"><i class="bi bi-clock"></i> 6 horas</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Ver curso <i class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="grid-item">
-            <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="card-img-top" alt="..." data-aos="zoom-in">
+            <div class="position-relative overflow-hidden">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" class="card-img-top" alt="..." data-aos="zoom-in">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-info px-3 py-2"><i class="bi bi-star"></i> Beginner</span>
+            </div>
             <div class="card-body">
-                <h5 class="card-title"> Networking Basics </h5>
-                <h5 class="card-title">Introducción a la ciberseguridad</h5>
-                <p class="card-text">Start learning the basics of computer networking and discover how networks operate.
-                    <br> Duration: 06h
+                <h5 class="card-title fw-bold mb-3"><i class="bi bi-diagram-3 text-purple"></i> Networking Basics</h5>
+                <p class="card-text text-muted">Start learning the basics of computer networking and discover how networks operate.
                 </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="badge bg-purple-light text-purple"><i class="bi bi-clock"></i> 6 horas</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Ver curso <i class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="grid-item">
-            <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="card-img-top" alt="..." data-aos="zoom-in">
+            <div class="position-relative overflow-hidden">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" class="card-img-top" alt="..." data-aos="zoom-in">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark px-3 py-2"><i class="bi bi-star"></i> Beginner</span>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">Beginner</h5>
-                <h5 class="card-title">Introducción a la IA moderna</h5>
-                <p class="card-text">Explore the exciting field of cybersecurity and why cybersecurity is a
-                    future-proof career. <br> Duration: 06h
+                <h5 class="card-title fw-bold mb-3"><i class="bi bi-robot text-purple"></i> Introducción a la IA moderna</h5>
+                <p class="card-text text-muted">Explore the exciting field of artificial intelligence and machine learning fundamentals.
                 </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="badge bg-purple-light text-purple"><i class="bi bi-clock"></i> 6 horas</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Ver curso <i class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <div class="grid-item">
-            <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="card-img-top" alt="..." data-aos="zoom-in">
+            <div class="position-relative overflow-hidden">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" loading="lazy" class="card-img-top" alt="..." data-aos="zoom-in">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-primary px-3 py-2"><i class="bi bi-star"></i> Intermediate</span>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">Beginner</h5>
-                <h5 class="card-title">Introducción a la ciberseguridad</h5>
-                <p class="card-text">Explore the exciting field of cybersecurity and why cybersecurity is a
-                    future-proof career. <br> Duration: 06h
+                <h5 class="card-title fw-bold mb-3"><i class="bi bi-code-slash text-purple"></i> Python Programming</h5>
+                <p class="card-text text-muted">Learn Python programming from scratch and build real-world applications.
                 </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="badge bg-purple-light text-purple"><i class="bi bi-clock"></i> 8 horas</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Ver curso <i class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
         </div>
         <!-- <div class="grid-item">
@@ -261,44 +282,56 @@
     </div>
 
     <!-- Sección de filas tipo damero (Card e Imagen alternando) -->
-    <div class="container my-5">
+    <div class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <span class="badge bg-purple-light text-purple mb-3 px-4 py-2 fs-6"><i class="bi bi-grid-3x3-gap"></i> Nuestros Programas</span>
+            <h2 class="display-5 fw-bold text-purple">Explora nuestros cursos especializados</h2>
+            <p class="lead text-muted">Aprende las habilidades más demandadas en la industria tecnológica</p>
+        </div>
         <!-- Fila 1: Card izquierda | Imagen derecha -->
         <div class="row align-items-center mb-5 damero-row">
             <div class="col-12 col-md-6" data-aos="fade-right">
                 <div class="card h-100 shadow">
                     <div class="card-body p-4">
-                        <h3 class="card-title">Networking Fundamentals</h3>
-                        <p class="card-text">Master the basics of computer networks. Learn how data travels across the internet, understand IP addressing, and get hands-on experience with network configuration.</p>
-                        <ul class="list-unstyled">
-                            <li>✓ TCP/IP protocols</li>
-                            <li>✓ Network topologies</li>
-                            <li>✓ Practical labs</li>
+                        <span class="badge bg-info text-white mb-3"><i class="bi bi-award"></i> Certificación Disponible</span>
+                        <h3 class="card-title fw-bold mb-3"><i class="bi bi-diagram-3 text-purple"></i> Networking Fundamentals</h3>
+                        <p class="card-text text-muted mb-4">Master the basics of computer networks. Learn how data travels across the
+                            internet, understand IP addressing, and get hands-on experience with network configuration.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> TCP/IP protocols</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Network topologies</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Practical labs</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Learn more</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-play-circle"></i> Comenzar Curso</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6" data-aos="fade-left">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Networking" loading="lazy">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow"
+                    alt="Networking" loading="lazy">
             </div>
         </div>
 
         <!-- Fila 2: Imagen izquierda | Card derecha -->
         <div class="row align-items-center mb-5 damero-row">
             <div class="col-12 col-md-6 order-md-1 order-2" data-aos="fade-right">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Cybersecurity" loading="lazy">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow"
+                    alt="Cybersecurity" loading="lazy">
             </div>
             <div class="col-12 col-md-6 order-md-2 order-1" data-aos="fade-left">
                 <div class="card h-100 shadow">
                     <div class="card-body p-4">
-                        <h3 class="card-title">Cybersecurity Essentials</h3>
-                        <p class="card-text">Protect digital assets and understand modern security threats. Learn encryption, network security, and best practices to keep data safe from cyber attacks.</p>
-                        <ul class="list-unstyled">
-                            <li>✓ Threat detection</li>
-                            <li>✓ Security protocols</li>
-                            <li>✓ Ethical hacking basics</li>
+                        <span class="badge bg-danger text-white mb-3"><i class="bi bi-shield-check"></i> Alta Demanda</span>
+                        <h3 class="card-title fw-bold mb-3"><i class="bi bi-shield-lock text-purple"></i> Cybersecurity Essentials</h3>
+                        <p class="card-text text-muted mb-4">Protect digital assets and understand modern security threats. Learn
+                            encryption, network security, and best practices to keep data safe from cyber attacks.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Threat detection</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Security protocols</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Ethical hacking basics</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Learn more</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-play-circle"></i> Comenzar Curso</a>
                     </div>
                 </div>
             </div>
@@ -309,38 +342,45 @@
             <div class="col-12 col-md-6" data-aos="fade-right">
                 <div class="card h-100 shadow">
                     <div class="card-body p-4">
-                        <h3 class="card-title">Programming for Everyone</h3>
-                        <p class="card-text">Start your coding journey with Python and JavaScript. Build web applications, automate tasks, and develop problem-solving skills essential for any tech career.</p>
-                        <ul class="list-unstyled">
-                            <li>✓ Python fundamentals</li>
-                            <li>✓ Web development</li>
-                            <li>✓ Real-world projects</li>
+                        <span class="badge bg-warning text-dark mb-3"><i class="bi bi-code-square"></i> Hands-on Projects</span>
+                        <h3 class="card-title fw-bold mb-3"><i class="bi bi-code-slash text-purple"></i> Programming for Everyone</h3>
+                        <p class="card-text text-muted mb-4">Start your coding journey with Python and JavaScript. Build web
+                            applications, automate tasks, and develop problem-solving skills essential for any tech
+                            career.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Python fundamentals</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Web development</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Real-world projects</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Learn more</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-play-circle"></i> Comenzar Curso</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6" data-aos="fade-left">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="Programming" loading="lazy">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow"
+                    alt="Programming" loading="lazy">
             </div>
         </div>
 
         <!-- Fila 4: Imagen izquierda | Card derecha -->
         <div class="row align-items-center mb-5 damero-row">
             <div class="col-12 col-md-6 order-md-1 order-2" data-aos="fade-right">
-                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="IoT" loading="lazy">
+                <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded shadow" alt="IoT"
+                    loading="lazy">
             </div>
             <div class="col-12 col-md-6 order-md-2 order-1" data-aos="fade-left">
                 <div class="card h-100 shadow">
                     <div class="card-body p-4">
-                        <h3 class="card-title">Internet of Things (IoT)</h3>
-                        <p class="card-text">Explore the connected world of smart devices. Learn how IoT transforms industries, from smart homes to industrial automation and healthcare.</p>
-                        <ul class="list-unstyled">
-                            <li>✓ Sensor networks</li>
-                            <li>✓ Data analytics</li>
-                            <li>✓ IoT security</li>
+                        <span class="badge bg-success text-white mb-3"><i class="bi bi-lightning"></i> Tecnología Emergente</span>
+                        <h3 class="card-title fw-bold mb-3"><i class="bi bi-cpu text-purple"></i> Internet of Things (IoT)</h3>
+                        <p class="card-text text-muted mb-4">Explore the connected world of smart devices. Learn how IoT transforms
+                            industries, from smart homes to industrial automation and healthcare.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Sensor networks</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Data analytics</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> IoT security</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Learn more</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-play-circle"></i> Comenzar Curso</a>
                     </div>
                 </div>
             </div>
@@ -381,92 +421,103 @@
     </div>
 
     <!-- Container fluid es para que el fondo azul ocupe todo el ancho el background color es para el color -->
-    <div class="container-fluid py-5" style="background-color: #f5f8fa;">
-        <div class="container">
+    <div class="container-fluid py-5 bg-purple-light">
+        <div class="container py-4">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="Copilot_20251213_222223.png" alt="Job market" class="img-fluid rounded shadow-sm w-100"
-                        style="max-width: 420px;" loading="lazy" data-aos="fade-right" data-aos="flip-left">
+                <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+                    <img src="Copilot_20251213_222223.png" alt="Job market" class="img-fluid rounded-4 shadow w-100"
+                        style="max-width: 420px;" loading="lazy" data-aos="fade-right">
                 </div>
                 <div class="col-lg-7">
-                    <h2 class="display-5 mb-3">Navigate the job market with confidence</h2>
-                    <p class="lead mb-4">Build your career skills, discover career possibilities, and get help finding
+                    <span class="badge bg-white text-purple mb-3 px-4 py-2 fs-6"><i class="bi bi-briefcase"></i> Recursos Profesionales</span>
+                    <h2 class="display-5 fw-bold text-purple mb-4">Navigate the job market with confidence</h2>
+                    <p class="lead text-muted mb-4">Build your career skills, discover career possibilities, and get help finding
                         jobs with Cisco Networking Academy career resources. Plan your career goals, craft your resume,
                         prepare for job interviews, and more.</p>
-                    <a href="#" class="btn btn-outline-primary btn-lg">Explore career resources</a>
+                    <a href="#" class="btn btn-primary btn-lg px-4"><i class="bi bi-search"></i> Explore career resources</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid py-5" style="background-color: #061d34;">
-        <div class="container">
+    <div class="container-fluid py-5 bg-purple-dark">
+        <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="display-4 text-white mb-4">Join Cisco Networking Academy</h2>
+                    <span class="badge bg-white bg-opacity-25 text-white mb-3 px-4 py-2 fs-6"><i class="bi bi-mortarboard-fill"></i> Únete a la Comunidad</span>
+                    <h2 class="display-4 text-white fw-bold mb-4">Join Cisco Networking Academy</h2>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead text-white mb-4">Cisco Networking Academy is all about you. We offer a comprehensive
+                    <p class="lead text-white mb-4 opacity-90">Cisco Networking Academy is all about you. We offer a comprehensive
                         curriculum developed by Cisco, covering networking, cybersecurity, programming, and other
                         IT-related topics. Prep for your first cert or your first career.</p>
-                    <a href="#" class="btn btn-primary btn-lg">Explore Cisco Networking Academy</a>
+                    <a href="#" class="btn btn-light btn-lg px-4 text-purple fw-bold"><i class="bi bi-arrow-right-circle"></i> Explore Cisco Networking Academy</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Fila de 4 imágenes con collapse en móvil -->
-    <div class="container my-5">
+    <div class="container my-5 py-5">
         <div class="row text-center">
-            <div class="col-12 mb-4">
-                <h3>Explore Our Community</h3>
-                <p>Click on each image to discover more</p>
+            <div class="col-12 mb-5">
+                <span class="badge bg-purple-light text-purple mb-3 px-4 py-2 fs-6"><i class="bi bi-people"></i> Nuestra Comunidad</span>
+                <h3 class="display-6 fw-bold text-purple mb-3">Explore Our Community</h3>
+                <p class="lead text-muted">Click on each image to discover more about our global network</p>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg1" role="button" aria-expanded="false" aria-controls="collapseImg1">
-                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Students" loading="lazy">
-                    <div class="image-overlay">Click to learn more</div>
+                <div class="clickable-image-container" data-bs-toggle="collapse" href="#collapseImg1" role="button"
+                    aria-expanded="false" aria-controls="collapseImg1">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image"
+                        alt="Students" loading="lazy">
+                    <div class="image-overlay"><i class="bi bi-info-circle"></i> Click to learn more</div>
                 </div>
                 <div class="collapse mt-3" id="collapseImg1">
-                    <div class="card card-body">
-                        <h5>Global Students</h5>
-                        <p>Join millions of students worldwide learning technology skills that matter.</p>
+                    <div class="card card-body border-0 shadow-sm">
+                        <h5 class="fw-bold"><i class="bi bi-people-fill text-purple"></i> Global Students</h5>
+                        <p class="text-muted mb-0">Join millions of students worldwide learning technology skills that matter.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg2" role="button" aria-expanded="false" aria-controls="collapseImg2">
-                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Instructors" loading="lazy">
-                    <div class="image-overlay">Click to learn more</div>
+                <div class="clickable-image-container" data-bs-toggle="collapse" href="#collapseImg2" role="button"
+                    aria-expanded="false" aria-controls="collapseImg2">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image"
+                        alt="Instructors" loading="lazy">
+                    <div class="image-overlay"><i class="bi bi-info-circle"></i> Click to learn more</div>
                 </div>
                 <div class="collapse mt-3" id="collapseImg2">
-                    <div class="card card-body">
-                        <h5>Expert Instructors</h5>
-                        <p>Learn from certified professionals with real-world industry experience.</p>
+                    <div class="card card-body border-0 shadow-sm">
+                        <h5 class="fw-bold"><i class="bi bi-person-badge text-purple"></i> Expert Instructors</h5>
+                        <p class="text-muted mb-0">Learn from certified professionals with real-world industry experience in networking and technology.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg3" role="button" aria-expanded="false" aria-controls="collapseImg3">
-                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Certificates" loading="lazy">
-                    <div class="image-overlay">Click to learn more</div>
+                <div class="clickable-image-container" data-bs-toggle="collapse" href="#collapseImg3" role="button"
+                    aria-expanded="false" aria-controls="collapseImg3">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image"
+                        alt="Certificates" loading="lazy">
+                    <div class="image-overlay"><i class="bi bi-info-circle"></i> Click to learn more</div>
                 </div>
                 <div class="collapse mt-3" id="collapseImg3">
-                    <div class="card card-body">
-                        <h5>Industry Certifications</h5>
-                        <p>Earn recognized credentials that boost your career prospects.</p>
+                    <div class="card card-body border-0 shadow-sm">
+                        <h5 class="fw-bold"><i class="bi bi-award text-purple"></i> Industry Certifications</h5>
+                        <p class="text-muted mb-0">Earn recognized credentials that boost your career prospects and validate your expertise.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="clickable-image-container" data-toggle="collapse" href="#collapseImg4" role="button" aria-expanded="false" aria-controls="collapseImg4">
-                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image" alt="Community" loading="lazy">
-                    <div class="image-overlay">Click to learn more</div>
+                <div class="clickable-image-container" data-bs-toggle="collapse" href="#collapseImg4" role="button"
+                    aria-expanded="false" aria-controls="collapseImg4">
+                    <img src="hacker-silhouette-hoodie-vector-51014515.avif" class="img-fluid rounded clickable-image"
+                        alt="Community" loading="lazy">
+                    <div class="image-overlay"><i class="bi bi-info-circle"></i> Click to learn more</div>
                 </div>
                 <div class="collapse mt-3" id="collapseImg4">
-                    <div class="card card-body">
-                        <h5>Strong Community</h5>
-                        <p>Connect with peers, mentors, and professionals in your field.</p>
+                    <div class="card card-body border-0 shadow-sm">
+                        <h5 class="fw-bold"><i class="bi bi-chat-dots text-purple"></i> Strong Community</h5>
+                        <p class="text-muted mb-0">Connect with peers, mentors, and professionals in your field through our global network.</p>
                     </div>
                 </div>
             </div>
@@ -474,24 +525,90 @@
     </div>
 
     <!-- Accordion de Redes Sociales -->
-    <div class="container my-5">
-        <h3 class="text-center mb-4">Síguenos en Redes Sociales</h3>
-        <div class="accordion" id="accordionSocialMedia">
+    <div class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <span class="badge bg-purple-light text-purple mb-3 px-4 py-2 fs-6"><i class="bi bi-share"></i> Redes Sociales</span>
+            <h3 class="display-6 fw-bold text-purple mb-3">Síguenos en Redes Sociales</h3>
+            <p class="lead text-muted">Connect with us and join our global community</p>
+        </div>
+
+        <!-- Vista Desktop: Iconos en fila -->
+        <div class="row text-center d-none d-md-flex justify-content-center">
+            <div class="col-md-3 mb-4">
+                <a href="https://facebook.com/cisconetworkingacademy" target="_blank"
+                    class="text-decoration-none">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-facebook text-primary" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark">Facebook</h5>
+                            <p class="text-muted small mb-0">Connect with our community</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="https://instagram.com/cisconetworkingacademy" target="_blank"
+                    class="text-decoration-none">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-instagram text-danger" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark">Instagram</h5>
+                            <p class="text-muted small mb-0">Follow our visual journey</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="https://twitter.com/CiscoNetAcad" target="_blank" class="text-decoration-none">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-twitter-x text-info" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark">Twitter / X</h5>
+                            <p class="text-muted small mb-0">Get the latest updates</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="https://linkedin.com/company/cisco-networking-academy" target="_blank"
+                    class="text-decoration-none">
+                    <div class="card h-100 border-0 shadow-sm hover-lift">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4 mb-3">
+                                <i class="bi bi-linkedin text-primary" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark">LinkedIn</h5>
+                            <p class="text-muted small mb-0">Expand your network</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Vista Móvil: Accordion (Bootstrap 5 Structure) -->
+        <div class="accordion d-md-none" id="accordionSocialMedia">
 
             <!-- Facebook -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFacebook">
-                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
-                            alt="Facebook" style="width:28px; height:28px; margin-right:10px;" loading="lazy">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                            style="width:28px; height:28px; margin-right:10px;" loading="lazy">
                         Facebook
                     </button>
                 </h2>
                 <div id="collapseFacebook" class="accordion-collapse collapse" aria-labelledby="headingFacebook"
-                    data-parent="#accordionSocialMedia">
+                    data-bs-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Stay connected</strong> with our Facebook community for updates, events, and networking opportunities.</p>
+                        <p><strong>Stay connected</strong> with our Facebook community for updates, events, and
+                            networking opportunities.</p>
                         <a href="https://facebook.com/cisconetworkingacademy" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
@@ -505,17 +622,18 @@
             <!-- Instagram -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingInstagram">
-                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
                             style="width:28px; height:28px; margin-right:10px;" loading="lazy">
                         Instagram
                     </button>
                 </h2>
                 <div id="collapseInstagram" class="accordion-collapse collapse" aria-labelledby="headingInstagram"
-                    data-parent="#accordionSocialMedia">
+                    data-bs-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Descubre contenido visual</strong> sobre cursos, estudiantes y eventos de la comunidad.</p>
+                        <p>Descubre contenido de<strong> Instagram</strong> sobre cursos, estudiantes y eventos de la
+                            comunidad.</p>
                         <a href="https://instagram.com/cisconetworkingacademy" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
@@ -529,17 +647,18 @@
             <!-- Twitter -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwitter">
-                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwitter" aria-expanded="false" aria-controls="collapseTwitter">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
-                            alt="Twitter" style="width:28px; height:28px; margin-right:10px;" loading="lazy">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwitter" aria-expanded="false" aria-controls="collapseTwitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"
+                            style="width:28px; height:28px; margin-right:10px;" loading="lazy">
                         Twitter / X
                     </button>
                 </h2>
                 <div id="collapseTwitter" class="accordion-collapse collapse" aria-labelledby="headingTwitter"
-                    data-parent="#accordionSocialMedia">
+                    data-bs-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Únete a la conversación</strong> y mantente informado con actualizaciones en tiempo real.</p>
+                        <p>Síguenos en <strong>Twitter</strong> y mantente informado con actualizaciones en tiempo
+                            real.</p>
                         <a href="https://twitter.com/CiscoNetAcad" target="_blank" rel="noopener noreferrer"
                             class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"
@@ -553,17 +672,17 @@
             <!-- LinkedIn -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingLinkedIn">
-                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseLinkedIn" aria-expanded="false" aria-controls="collapseLinkedIn">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseLinkedIn" aria-expanded="false" aria-controls="collapseLinkedIn">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
                             style="width:28px; height:28px; margin-right:10px;" loading="lazy">
                         LinkedIn
                     </button>
                 </h2>
                 <div id="collapseLinkedIn" class="accordion-collapse collapse" aria-labelledby="headingLinkedIn"
-                    data-parent="#accordionSocialMedia">
+                    data-bs-parent="#accordionSocialMedia">
                     <div class="accordion-body">
-                        <p><strong>Conecta profesionalmente</strong> con la comunidad de Cisco Networking Academy y encuentra oportunidades laborales.</p>
+                        <p>Conecta profesionalmente <strong>en LinkedIn</strong> con esta comunidad.</p>
                         <a href="https://linkedin.com/company/cisco-networking-academy" target="_blank"
                             rel="noopener noreferrer" class="btn btn-primary">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
@@ -577,7 +696,70 @@
         </div>
     </div>
 
-
+    <!-- Footer -->
+    <footer class="bg-purple-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-mortarboard-fill"></i> Cisco Networking Academy</h5>
+                    <p class="text-white-50">Empowering individuals with technology skills for the digital economy. Join millions of learners worldwide.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">Programs</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Networking</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Cybersecurity</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Programming</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">IoT</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Career Paths</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Certifications</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Job Portal</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Learning Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Partners</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-white border-opacity-25 my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-2">
+                    <p class="mb-0 text-white-50 small">&copy; 2024 Cisco Networking Academy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none small me-3 hover-text-white">Privacy Policy</a>
+                    <a href="#" class="text-white-50 text-decoration-none small me-3 hover-text-white">Terms of Service</a>
+                    <a href="#" class="text-white-50 text-decoration-none small hover-text-white">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
